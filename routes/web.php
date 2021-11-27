@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\HomePageController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProductDetailController;
+use App\Http\Controllers\Front\AccountController;
+use App\Http\Controllers\Front\BasketController;
+use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,10 +24,11 @@ use Illuminate\Support\Facades\Route;
 
 
 //Route::get('home','frontend/homepage')->name('homepage');
-Route::get('/',[HomePageController::class,'homePage'])->name('homepage');
+Route::get('/',[HomeController::class,'index'])->name('homepage');
 
 Route::get('product',[ProductController::class,'index'])->name('product');
-
-Route::get('product-detail',[ProductDetailController::class,'index'])->name('productDetail');
-
-Route::get('speacial-offer',[ProductDetailController::class,'speacialOffer'])->name('speaciloffer');
+Route::get('product-detail',[ProductController::class,'show'])->name('product-detail');
+    
+Route::resource('basket',BasketController::class);
+Route::resource('account',AccountController::class);
+Route::get('login',[AccountController::class,'login'])->name('account.login');

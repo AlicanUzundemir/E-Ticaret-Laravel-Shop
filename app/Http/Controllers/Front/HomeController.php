@@ -1,27 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomePageController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-    public function homePage(){
-        return view('frontend/homepage');
-    }
-
-
     public function index()
     {
-        //
+        return view('frontend.homepage');
     }
+
+
 
     /**
      * Show the form for creating a new resource.

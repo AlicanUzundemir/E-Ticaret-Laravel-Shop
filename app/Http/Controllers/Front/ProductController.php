@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class ProductDetailController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,10 +15,7 @@ class ProductDetailController extends Controller
      */
     public function index()
     {
-        return view('frontend/product-detail');
-    }
-    public function speacialOffer(){
-        return view('frontend/speacial-offer');
+        return view('frontend.product');
     }
 
     /**
@@ -24,9 +23,9 @@ class ProductDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function categories()
     {
-        //
+        $categories = Category::all();
     }
 
     /**
