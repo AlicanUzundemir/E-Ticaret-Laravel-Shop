@@ -22,10 +22,11 @@
 	@include('frontend.layouts.partials.footer')
 	<!-- Footer son -->
 	<!-- Placed at the end of the document so the pages load faster ============================================= -->
+	@include('frontend.layouts.partials.secectionBox')
 	<!-- Script kısmı -->
 	@include('frontend.layouts.partials.script')
 	<!-- Script son -->
-
+	
 </body>
 
 </html>

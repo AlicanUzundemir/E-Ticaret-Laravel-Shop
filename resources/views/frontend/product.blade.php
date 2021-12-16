@@ -45,7 +45,7 @@ HomePage
           <div class="tab-pane" id="listView">
             <div class="row">
               <div class="span2">
-                <img src="themes/images/products/3.jpg" alt="">
+                <img src="{{asset('front/themes/images/products/3.jpg')}}" alt="">
               </div>
               <div class="span4">
                 <h3>New | Available</h3>
@@ -74,7 +74,7 @@ HomePage
             <hr class="soft">
             <div class="row">
               <div class="span2">
-                <img src="themes/images/products/1.jpg" alt="">
+                <img src="{{asset('front/themes/images/products/1.jpg')}}" alt="">
               </div>
               <div class="span4">
                 <h3>New | Available</h3>
@@ -103,7 +103,7 @@ HomePage
             <hr class="soft">
             <div class="row">
               <div class="span2">
-                <img src="themes/images/products/3.jpg" alt="">
+                <img src="{{asset('front/themes/images/products/3.jpg')}}" alt="">
               </div>
               <div class="span4">
                 <h3>New | Available</h3>
@@ -132,7 +132,7 @@ HomePage
             <hr class="soft">
             <div class="row">
               <div class="span2">
-                <img src="themes/images/products/3.jpg" alt="">
+                <img src="{{asset('front/themes/images/products/3.jpg')}}" alt="">
               </div>
               <div class="span4">
                 <h3>New | Available</h3>
@@ -162,7 +162,7 @@ HomePage
             <hr class="soft">
             <div class="row">
               <div class="span2">
-                <img src="themes/images/products/3.jpg" alt="">
+                <img src="{{asset('front/themes/images/products/3.jpg')}}" alt="">
               </div>
               <div class="span4">
                 <h3>New | Available</h3>
@@ -189,7 +189,7 @@ HomePage
             <hr class="soft">
             <div class="row">
               <div class="span2">
-                <img src="themes/images/products/3.jpg" alt="">
+                <img src="{{asset('front/themes/images/products/3.jpg')}}" alt="">
               </div>
               <div class="span4">
                 <h3>New | Available</h3>
@@ -222,7 +222,7 @@ HomePage
             <ul class="thumbnails">
               <li class="span3">
                 <div class="thumbnail">
-                  <a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
+                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
                     <h5>Manicure &amp; Pedicure</h5>
                     <p>
@@ -234,7 +234,7 @@ HomePage
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                  <a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
+                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
                     <h5>Manicure &amp; Pedicure</h5>
                     <p>
@@ -246,7 +246,7 @@ HomePage
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                  <a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
+                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
                     <h5>Manicure &amp; Pedicure</h5>
                     <p>
@@ -258,7 +258,7 @@ HomePage
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                  <a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
+                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
                     <h5>Manicure &amp; Pedicure</h5>
                     <p>
@@ -270,7 +270,7 @@ HomePage
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                  <a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
+                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
                     <h5>Manicure &amp; Pedicure</h5>
                     <p>
@@ -282,7 +282,7 @@ HomePage
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                  <a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""></a>
+                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
                     <h5>Manicure &amp; Pedicure</h5>
                     <p>

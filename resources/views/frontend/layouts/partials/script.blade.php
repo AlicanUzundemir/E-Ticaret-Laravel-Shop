@@ -1,12 +1,12 @@
 <script src="{{asset('front/themes/js/jquery.js')}}" type="text/javascript"></script>
 <script src="{{asset('front/bootstrap/css/bootstrap.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('front/themes/js/google-code-prettify/prettify.js')}}"></script>
-	
-	<script src="{{asset('front/themes/js/bootshop.js')}}"></script>
-	<script src="{{asset('front/themes/js/jquery.lightbox-0.5.js')}}"></script>
+<script src="{{asset('front/themes/js/google-code-prettify/prettify.js')}}"></script>
 
-	<!-- Themes front/themeser section ============================================================================================= -->
-	<!-- <div id="secectionBox">
+<script src="{{asset('front/themes/js/bootshop.js')}}"></script>
+<script src="{{asset('front/themes/js/jquery.lightbox-0.5.js')}}"></script>
+
+<!-- Themes front/themeser section ============================================================================================= -->
+<!-- <div id="secectionBox">
 		<div id="themeContainer">
 			<div id="hideme" class="themeTitle">Style Selector</div>
 			<div class="themeName">Oregional Skin</div>
@@ -91,7 +91,7 @@
 			</div>
 		</div>
 	</div> -->
-	<span id="themesBtn"></span>
+<span id="themesBtn"></span>
 
-	<link rel="stylesheet" href="{{asset('front/themes/switch/themeswitch.css')}}" type="text/css" media="screen" />
-	<script src="{{asset('front/themes/switch/theamswitcher.js')}}" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="{{asset('front/themes/switch/themeswitch.css')}}" type="text/css" media="screen" />
+<script src="{{asset('front/themes/switch/theamswitcher.js')}}" type="text/javascript" charset="utf-8"></script>
