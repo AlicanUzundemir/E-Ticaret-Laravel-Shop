@@ -25,7 +25,9 @@ class HomeController extends Controller
                 $data[$key]['sub_categories'] = collect($categories)->where('up_id', $item->id);
             }
         });
-        $data = collect($data)->values();
+    
+        
+        
 
         /*        $sliders = ProductDetail::with(['product' => function ($query) {
                     return $query->select('id', 'name')->where('stock', 54)->get();
@@ -43,19 +45,19 @@ class HomeController extends Controller
             ->where('slider', 1)
             ->orderBy('created_at', 'DESC')
             ->get()
-            ->take(5);
+            ->take(4);
 
         $featured = ProductDetail::with('product')
             ->where('featured', 1)
             ->orderBy('created_at', 'DESC')
             ->get()
-            ->take(8);
+            ->take(4);
 
         $latest = ProductDetail::with('product')
             ->where('latest', 1)
             ->orderBy('created_at', 'DESC')
             ->get()
-            ->take(8);
+            ->take(4);
 
 
         $electronics = Category::with(['products' => function ($query) {
@@ -78,10 +80,14 @@ class HomeController extends Controller
         }])->where(['slug' => 'digital'])
             ->first();
 //dd($men->products);
+        
         return view('frontend.homepage',
             compact('data','featured', 'latest','sliders',
                 'electronics', 'foodbeverages', 'digital', 'clothes'));
     }
+    
+    
+    
 
 //     public function getDb()
 //     {

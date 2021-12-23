@@ -40,6 +40,8 @@ Route::get('login',[AccountController::class,'login'])->name('account.login');
 Route::get('categories',[ProductController::class,'categories'])->name('categories');
 
 Route::get('product-detail/{slug}',[ProductController::class,'show'])->name('product-detail');
+
+
 Route::get('category/{slug}/{id}', [ProductController::class, 'category'])->name('category');
 Route::resource('basket',BasketController::class);
 Route::resource('account',AccountController::class);

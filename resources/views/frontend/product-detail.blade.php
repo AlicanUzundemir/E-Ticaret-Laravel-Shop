@@ -34,7 +34,7 @@ HomePage
             </ul>
           </li>
           <li class="subMenu"><a>FOOD AND BEVERAGES [1000]</a>
-            <ul>
+            <ul> 
             <li><a href="{{route('category',['slug'=>'angoves','id'=>15])}}"><i class="icon-chevron-right"></i>Angoves (35)</a></li>
 							<li><a href="{{route('category',['slug'=>'bouchard_aine_fils','id'=>16])}}"><i class="icon-chevron-right"></i>Bouchard Aine &amp; Fils (8)</a></li>
 							<li><a href="{{route('category',['slug'=>'french_rabbit','id'=>17])}}"><i class="icon-chevron-right"></i>French Rabbit (5)</a></li>
@@ -114,12 +114,12 @@ HomePage
             </div>
           </div>
           <div class="span6">
-            <h3>Fujifilm FinePix S2950 Digital Camera </h3>
+            <h3>{{$product->slug}} </h3>
             <small>- (14MP, 18x Optical Zoom) 3-inch LCD</small>
             <hr class="soft">
             <form class="form-horizontal qtyFrm">
               <div class="control-group">
-                <label class="control-label"><span>$222.00</span></label>
+                <label class="control-label"><span>${{$product->price}}</span></label>
                 <div class="controls">
                   <input type="number" class="span1" placeholder="Qty.">
                   <button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
@@ -128,7 +128,7 @@ HomePage
             </form>
 
             <hr class="soft">
-            <h4>100 items in stock</h4>
+            <h4>{{$product->stock}} items in stock</h4>
             <form class="form-horizontal qtyFrm pull-right">
               <div class="control-group">
                 <label class="control-label"><span>Color</span></label>
