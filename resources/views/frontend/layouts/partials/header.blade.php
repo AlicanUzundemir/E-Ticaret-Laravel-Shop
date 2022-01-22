@@ -23,8 +23,9 @@
             </a>
             <div class="navbar-inner">
                 <a class="brand" href="{{route('homepage')}}"><img src="{{asset('front/themes/images/logo.png')}}" alt="Bootsshop" /></a>
-                <form class="form-inline navbar-search" method="post" action="products.html">
-                    <input id="srchFld" class="srchTxt" type="text" />
+                <form class="form-inline navbar-search" method="post" action="{{route('search')}}">
+                    @csrf
+                    <input name="search" class="srchTxt" type="text" />
                     <select class="srchTxt">
                         <option>All</option>
                         <option>CLOTHES </option>
@@ -35,36 +36,65 @@
                     </select>
                     <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
                 </form>
+
                 <ul id="topMenu" class="nav pull-right">
-                    <li class=""><a href="special_offer.html">Specials Offer</a></li>
-                    <li class=""><a href="normal.html">Delivery</a></li>
-                    <li class=""><a href="contact.html">Contact</a></li>
-                    <li class="">
-                        <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
-                        <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h3>Login Block</h3>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal loginFrm">
-                                    <div class="control-group">
-                                        <input type="text" id="inputEmail" placeholder="Email">
+                    @include('common.error_b')
+                    @include('common.messages_b')
+                    <form action="{{route('account.login_post')}}" method="post">
+
+                        {{csrf_field()}}
+                        <ul style="margin: 8px;">
+
+
+                            <li style="float: left">
+                                <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
+                                <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
+
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h3>Login Block</h3>
+
                                     </div>
-                                    <div class="control-group">
-                                        <input type="password" id="inputPassword" placeholder="Password">
+                                    <div class="modal-body">
+                                        <form action="{{route('account.login_post')}}" method="post" class="form-horizontal loginFrm">
+
+                                            <div class="control-group">
+                                                <input type="text" name="email" placeholder="Email">
+                                            </div>
+                                            <div class="control-group">
+                                                <input type="password" name="password" placeholder="Password">
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="checkbox">
+                                                    <input type="checkbox"> Remember me
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Sign in</button>
+                                        </form>
+
+
+                                        <!-- <a href="{{route('account.login_post')}}"><span class="btn btn-large btn-success">Sign in</span></a> -->
+
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                                     </div>
-                                    <div class="control-group">
-                                        <label class="checkbox">
-                                            <input type="checkbox"> Remember me
-                                        </label>
-                                    </div>
-                                </form>
-                                <button type="submit" class="btn btn-success">Sign in</button>
-                                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                            </div>
-                        </div>
-                    </li>
+                                </div>
+                            </li>
+
+                            <form action="{{route('account.logout')}}" method="post">
+                            @auth
+                            @csrf
+                            <li>
+                                <button type="submit"><span class="btn btn-large btn-success">Logout</span></button>
+                            </li>
+                            @endauth
+                            </form>
+                            @guest
+                            <li style="float: left">
+                                <a href="{{route('account.registerPage')}}"><span class="btn btn-large btn-success">Register</span></a>
+                            </li>
+                            @endguest
+                        </ul>
+                    </form>
                 </ul>
             </div>
         </div>

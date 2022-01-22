@@ -1,12 +1,10 @@
 @extends('frontend.layouts.master')
 @section('title')
-HomePage
+Products
 @endsection
 @section('content')
 
 <!-- Start slider -->
-@include('frontend.layouts.partials.carousel-slider')
-
 <div id="mainBody">
   <div class="container">
     <div class="row">
@@ -15,7 +13,7 @@ HomePage
       <!-- Sidebar end=============================================== -->
       <div class="span9">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+          <li><a href="{{route('homepage')}}">Home</a> <span class="divider">/</span></li>
           <li class="active">Products Name</li>
         </ul>
         <h3> Products Name <small class="pull-right"> 40 products are available </small></h3>
@@ -65,8 +63,8 @@ HomePage
                     <input type="checkbox"> Adds product to compair
                   </label><br>
 
-                  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 
                 </form>
               </div>
@@ -94,8 +92,8 @@ HomePage
                     <input type="checkbox"> Adds product to compair
                   </label><br>
 
-                  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 
                 </form>
               </div>
@@ -123,8 +121,8 @@ HomePage
                     <input type="checkbox"> Adds product to compair
                   </label><br>
 
-                  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 
                 </form>
               </div>
@@ -152,8 +150,8 @@ HomePage
                     <input type="checkbox"> Adds product to compair
                   </label><br>
 
-                  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 
                 </form>
               </div>
@@ -181,8 +179,8 @@ HomePage
                   <label class="checkbox">
                     <input type="checkbox"> Adds product to compair
                   </label><br>
-                  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large"><i class="icon-zoom-in"></i></a>
                 </form>
               </div>
             </div>
@@ -209,8 +207,8 @@ HomePage
                     <input type="checkbox"> Adds product to compair
                   </label><br>
 
-                  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                  <a href="{{route('productDetail')}}" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 
                 </form>
               </div>
@@ -218,9 +216,26 @@ HomePage
             <hr class="soft">
           </div>
 
-          <div class="tab-pane  active" id="blockView">
+          <div class="tab-pane  active">
             <ul class="thumbnails">
-              <li class="span3">
+              @foreach($products as $product)
+              <li>
+                <div class="thumbnail">
+                  <a href="{{route('product-detail',$product->slug)}}"><img src="{{asset('front/themes/images/products/2.jpg')}}" alt=""></a>
+                  <div class="caption">
+                    <h5>{{$product->name}}</h5>
+                    <p>
+                      {{$product->description}}
+                    </p>
+                    <h4 style="text-align:center"><a class="btn" href="#"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">{{$product->price}}</a></h4>
+                  </div>
+                </div>
+                @if($product->remain===0)
+                <span class="aa-badge aa-sold-out">Sold Out!</span>
+                @endif
+              </li>
+              @endforeach
+              <!-- <li class="span3">
                 <div class="thumbnail">
                   <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
                   <div class="caption">
@@ -279,19 +294,7 @@ HomePage
                     <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
                   </div>
                 </div>
-              </li>
-              <li class="span3">
-                <div class="thumbnail">
-                  <a href="product_details.html"><img src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
-                  <div class="caption">
-                    <h5>Manicure &amp; Pedicure</h5>
-                    <p>
-                      I'm a paragraph. Click here
-                    </p>
-                    <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">€222.00</a></h4>
-                  </div>
-                </div>
-              </li>
+              </li> -->
             </ul>
             <hr class="soft">
           </div>
@@ -299,18 +302,12 @@ HomePage
 
         <a href="compair.html" class="btn btn-large pull-right">Compair Product</a>
         <div class="pagination">
-          <ul>
-            <li><a href="#">‹</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">...</a></li>
-            <li><a href="#">›</a></li>
-          </ul>
+          {{$products->appends(['search'=>old('search')])->links()}}
+          
         </div>
         <br class="clr">
       </div>
     </div>
   </div>
 </div>
+@endsection

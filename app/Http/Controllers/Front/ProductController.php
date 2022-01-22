@@ -53,7 +53,7 @@ class ProductController extends Controller
     {
         $data = Category::with('subCategories')
             ->where('up_id', 0)
-            ->get()
+            ->get() 
             ->toArray();
         $category = Category::where(['slug' => $slug, 'id' => $id])
             ->firstOrFail();
@@ -92,6 +92,28 @@ class ProductController extends Controller
                 ])->firstOrFail();*/
         $product = Product::where('slug', $slug)->firstOrFail();
         return view('frontend.product-detail', compact('data', 'product'));
+        
+    }
+    public function search(Request $request){
+
+        //dd($request->search);
+        //dd($request->all()); // hepsi
+        //dd($request->only('search')); //sadece
+        //dd($request->except('_token')); //harici
+        // dd($request->get('_token')); // kendisi
+        //dd($request->input('search'));
+
+        $search = $request->input('search');
+
+        $categories = Category::all();
+        $data = Category::with('subCategories');
+        $products = Product::with('categories')
+            ->where('name','like',"%$search%")
+            ->orWhere('name','like',"%$search%")
+            ->simplePaginate(4);
+        $request->flash();
+
+        return view('frontend.product',compact('categories','data','products'));
         
     }
     
