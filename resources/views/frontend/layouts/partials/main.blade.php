@@ -17,11 +17,11 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i>
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/b1.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -29,11 +29,11 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i>
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/b2.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -41,11 +41,11 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i>
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/b3.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -53,11 +53,11 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i>
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/b4.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -69,11 +69,11 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i>
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/5.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -81,33 +81,33 @@
 											<li class="span3">
 												<div class="thumbnail">
 													<i class="tag"></i>
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/6.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/7.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/8.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -118,44 +118,44 @@
 										<ul class="thumbnails">
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/9.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/10.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/11.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/1.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -166,44 +166,44 @@
 										<ul class="thumbnails">
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/2.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/3.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/4.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
 											</li>
 											<li class="span3">
 												<div class="thumbnail">
-													<a href="product_details.html"><img
+													<a href="{{route('product-detail',$item->product->slug)}}"><img
 															src="{{asset('front/themes/images/products/5.jpg')}}" alt=""></a>
 													<div class="caption">
 														<h5>Product name</h5>
-														<h4><a class="btn" href="product_details.html">VIEW</a> <span
+														<h4><a class="btn" href="{{route('product-detail',$item->product->slug)}}">VIEW</a> <span
 																class="pull-right">$222.00</span></h4>
 													</div>
 												</div>
@@ -220,14 +220,14 @@
 					<ul class="thumbnails">
 						<li class="span3">
 							<div class="thumbnail">
-								<a href="product_details.html"><img src="{{asset('front/themes/images/products/6.jpg')}}" alt="" /></a>
+								<a href="{{route('product-detail',$item->product->slug)}}"><img src="{{asset('front/themes/images/products/6.jpg')}}" alt="" /></a>
 								<div class="caption">
 									<h5>Product name</h5>
 									<p>
 										Lorem Ipsum is simply dummy text.
 									</p>
 
-									<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+									<h4 style="text-align:center"><a class="btn" href="{{route('product-detail',$item->product->slug)}}"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
 												class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
 											href="#">$222.00</a></h4>
@@ -236,13 +236,13 @@
 						</li>
 						<li class="span3">
 							<div class="thumbnail">
-								<a href="product_details.html"><img src="{{asset('front/themes/images/products/7.jpg')}}" alt="" /></a>
+								<a href="{{route('product-detail',$item->product->slug)}}"><img src="{{asset('front/themes/images/products/7.jpg')}}" alt="" /></a>
 								<div class="caption">
 									<h5>Product name</h5>
 									<p>
 										Lorem Ipsum is simply dummy text.
 									</p>
-									<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+									<h4 style="text-align:center"><a class="btn" href="{{route('product-detail',$item->product->slug)}}"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
 												class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
 											href="#">$222.00</a></h4>
@@ -251,13 +251,13 @@
 						</li>
 						<li class="span3">
 							<div class="thumbnail">
-								<a href="product_details.html"><img src="{{asset('front/themes/images/products/8.jpg')}}" alt="" /></a>
+								<a href="{{route('product-detail',$item->product->slug)}}"><img src="{{asset('front/themes/images/products/8.jpg')}}" alt="" /></a>
 								<div class="caption">
 									<h5>Product name</h5>
 									<p>
 										Lorem Ipsum is simply dummy text.
 									</p>
-									<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+									<h4 style="text-align:center"><a class="btn" href="{{route('product-detail',$item->product->slug)}}"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
 												class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
 											href="#">$222.00</a></h4>
@@ -266,13 +266,13 @@
 						</li>
 						<li class="span3">
 							<div class="thumbnail">
-								<a href="product_details.html"><img src="{{asset('front/themes/images/products/9.jpg')}}" alt="" /></a>
+								<a href="{{route('product-detail',$item->product->slug)}}"><img src="{{asset('front/themes/images/products/9.jpg')}}" alt="" /></a>
 								<div class="caption">
 									<h5>Product name</h5>
 									<p>
 										Lorem Ipsum is simply dummy text.
 									</p>
-									<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+									<h4 style="text-align:center"><a class="btn" href="{{route('product-detail',$item->product->slug)}}"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
 												class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
 											href="#">$222.00</a></h4>
@@ -281,13 +281,13 @@
 						</li>
 						<li class="span3">
 							<div class="thumbnail">
-								<a href="product_details.html"><img src="{{asset('front/themes/images/products/10.jpg')}}" alt="" /></a>
+								<a href="{{route('product-detail',$item->product->slug)}}"><img src="{{asset('front/themes/images/products/10.jpg')}}" alt="" /></a>
 								<div class="caption">
 									<h5>Product name</h5>
 									<p>
 										Lorem Ipsum is simply dummy text.
 									</p>
-									<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+									<h4 style="text-align:center"><a class="btn" href="{{route('product-detail',$item->product->slug)}}"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
 												class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
 											href="#">$222.00</a></h4>
@@ -296,13 +296,13 @@
 						</li>
 						<li class="span3">
 							<div class="thumbnail">
-								<a href="product_details.html"><img src="{{asset('front/themes/images/products/11.jpg')}}" alt="" /></a>
+								<a href="{{route('product-detail',$item->product->slug)}}"><img src="{{asset('front/themes/images/products/11.jpg')}}" alt="" /></a>
 								<div class="caption">
 									<h5>Product name</h5>
 									<p>
 										Lorem Ipsum is simply dummy text.
 									</p>
-									<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+									<h4 style="text-align:center"><a class="btn" href="{{route('product-detail',$item->product->slug)}}"> <i
 												class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
 												class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
 											href="#">$222.00</a></h4>
