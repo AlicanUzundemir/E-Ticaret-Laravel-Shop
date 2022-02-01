@@ -31,7 +31,9 @@ class AccountController extends Controller
             'password' => 'required|min:6'
         ]);
 
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->pass]))
+        
+
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
         {
             if(auth()->user()->email_verified_at === null){
                 auth()->logout();
@@ -94,7 +96,7 @@ class AccountController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->pass),
+            'password' => Hash::make($request->sifre),
             'remember_token' => Str::random(10),
             'access_token' => Str::random(10),
         ]);

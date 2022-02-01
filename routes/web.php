@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Front\AccountController;
 use App\Http\Controllers\Front\BasketController;
 use App\Http\Controllers\Front\HomeController;
@@ -42,7 +44,7 @@ Route::get('categories',[ProductController::class,'categories'])->name('categori
 
 //Route::post('search', [ProductController::class, 'search'])->name('search');
 //Route::get('search', [ProductController::class, 'search'])->name('get.search');
-Route::match(['get', 'post'], 'product-name-buraya-yazıcaz', [ProductController::class, 'search'])->name('search');
+Route::match(['get', 'post'], 'search', [ProductController::class, 'search'])->name('search');
 
 Route::get('product-detail/{slug}',[ProductController::class,'show'])->name('product-detail');
 
@@ -58,6 +60,23 @@ Route::group(['prefix' => 'accounts', 'as' => 'account.'],function(){
     Route::post('logout', [AccountController::class, 'logout'])->name('logout');
     Route::get('activation/{token}',[AccountController::class, 'activation'])->name('activation');
 });
+
+Route::get('login',[AuthController::class, 'adminLoginForm'])->name('login');
+Route::post('login',[AuthController::class, 'adminLogin'])->name('post.login');
+
+Route::group(['prefix' => 'admin' , 'middleware' => 'admin' , 'as' => 'admin.'], function() {
+
+    Route::get('dashboard',[DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('categories', [A_CategoryController::class, 'index'])->name('categories.index');
+    Route::get('categories/create', [A_CategoryController::class, 'create'])->name('categories.create');
+    Route::post('categories/store', [A_CategoryController::class, 'store'])->name('categories.store');
+    Route::get('categories/edit/{id}', [A_CategoryController::class, 'edit'])->name('categories.edit');
+    Route::put('categories/update/{id}', [A_CategoryController::class, 'update'])->name('categories.update');
+    Route::delete('categories/destroy/{id}', [A_CategoryController::class, 'destroy'])->name('categories.destroy');
+
+});
+
+
 
 
 Route::group(['prefix' => 'accounts', 'middleware' => 'auth', 'as' => 'account.'], function () {
